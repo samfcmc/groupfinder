@@ -1,1 +1,1 @@
-web: gunicorn groupfinderapp.wsgi --log-file -
+web: gunicorn groupfinder.wsgi --log-file -
