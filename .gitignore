@@ -7,3 +7,4 @@ fenixedu.ini
 db.sqlite3
 name_service.py
 virtenv
+staticfiles
