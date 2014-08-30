@@ -2,12 +2,57 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Group finder</title>
-	</head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-	<body>
-		{% verbatim %}
-		{{test}}
-		{% endverbatim %}
+		<title>Group finder</title>
+
+		{% load staticfiles %}
+		<!-- Bootstrap core CSS -->
+		<link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+		<script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'angular/angular.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'angular-ui-router/release/angular-ui-router.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+	</head>
+	<body ng-app="App">
+		
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" ui-sref="home">Technicians Manager</a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active">
+	            	<a ui-sref="home">
+	            		Home
+	            	</a>
+	            </li>
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+		<div ui-view>
+
+		</div>
+
+		
+
+
+	
 	</body>
 </html>
