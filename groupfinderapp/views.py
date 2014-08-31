@@ -20,8 +20,6 @@ fenixEduClient = fenixedu.FenixEduClient(config)
 # Create your views here.
 def index(request):
 	context = {'auth_url': fenixEduClient.get_authentication_url()}
-	print(request.session.get('access_token', None))
-	print(request.session.get('refresh_token', None))
 
 	code = request.GET.get('code', None)
 	if code is not None and not request.user.is_authenticated():
