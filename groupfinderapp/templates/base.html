@@ -41,6 +41,15 @@
 	            </li>
 	          </ul>
 	          <ul class="nav navbar-nav navbar-right">
+	          	{% if user.is_authenticated %}
+	          	<li>
+	          		<a href="/groupfinder/logout">Logout</a>
+	          	</li>
+	          	{% else %}
+	          	<li>
+	          		<a href="{{ auth_url }}">Login</a>
+	          	</li>
+	          	{% endif %}
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>

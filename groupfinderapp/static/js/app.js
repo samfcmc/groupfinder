@@ -1,9 +1,9 @@
-var App = angular.module('App', ['ui.router', 'Services']);
+var App = angular.module('App', ['ui.router']);
 
 App.config(['$stateProvider', '$urlRouterProvider', 
 	function($stateProvider, $urlRouterProvider) {
 
-	$urlRouterProvider.otherwise("/home");
+	//$urlRouterProvider.otherwise("/home");
 
 	/*$stateProvider.state('home', {
 		url: "/home",
