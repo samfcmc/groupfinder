@@ -93,7 +93,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-AUTHENTICATION_BACKENDS = ('groupfinderapp.fenixedu_auth.FenixEduAuthenticationBackend',)
+AUTHENTICATION_BACKENDS = (
+    'fenixedu.authentication.backend.FenixEduAuthenticationBackend',
+    )
 
 
 # Static files (CSS, JavaScript, Images)
